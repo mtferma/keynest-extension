@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keynest</title>
+  <link rel="stylesheet" href="Generate.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="generate-page">
+    <header class="header">
+      <h1>Keynest</h1>
+      <p class="main-subtitle" style="text-align: center; font-size: 14px; margin-bottom: 10px; margin-left: 0px;">
+        Запоминающиеся пароли. Безопасно. Просто.
+      </p>
+    </header>
+
+    <div class="password-display-container">
+      <div class="password-display" id="password-display"> </div>
+      <button class="copy-button" id="copy-button">
+        <img src="public/copyIcon.png" alt="copy icon">
+      </button>
+    </div>
+    <div class="copy-message" id="copy-message" style="display: none;"></div>
+
+    <div id="associations-section" style="display: none;">
+      <div class="associations-toggle" id="associations-toggle">
+        <p class="associations-title">Ассоциации ▼</p>
+      </div>
+      <div class="associations-box closed" id="associations-box">
+        <ul id="associations-list"></ul>
+      </div>
+    </div>
+
+    <div class="slider-section">
+      <p>Количество слогов</p>
+      <div class="slider-container">
+        <input
+          type="range"
+          min="2"
+          max="6"
+          step="0.01"
+          value="5"
+          class="slider"
+          id="syllable-slider"
+        >
+        <div class="marks">
+          <div class="mark"><div class="dot"></div><span>2</span></div>
+          <div class="mark"><div class="dot"></div><span>3</span></div>
+          <div class="mark"><div class="dot"></div><span>4</span></div>
+          <div class="mark"><div class="dot"></div><span>5</span></div>
+          <div class="mark"><div class="dot"></div><span>6</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="include-numbers">
+      <label for="include-numbers">Добавить цифры</label>
+    </div>
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="include-symbols">
+      <label for="include-symbols">Добавить символы</label>
+    </div>
+
+    <div class="seed-container">
+      <label for="seed-input">Seed (необязательно):</label>
+      <div class="tooltip-container">
+        <span class="tooltip-icon">?</span>
+        <div class="tooltip-text">
+          Личный код (до 3 букв, только буквы). Добавляется в начало пароля и делает его уникальным. Используйте только буквы, без цифр и символов.
+        </div>
+      </div>
+      <input id="seed-input" type="text" class="seed-input">
+    </div>
+
+    <button class="generate-button" id="generate-button">ГЕНЕРИРОВАТЬ</button>
+  </div>
+  <script src="popup.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93f16ce788389fdc',t:'MTc0NzEzMTY0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
