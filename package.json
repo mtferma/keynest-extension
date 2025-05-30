@@ -1,0 +1,37 @@
+{
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-puppeteer": "^11.0.0",
+    "puppeteer": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "name": "keynest-extension",
+  "version": "1.0.0",
+  "main": "jest.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.2.0",
+    "node-fetch": "^2.7.0",
+    "promise-polyfill": "^8.3.0",
+    "tr46": "^0.0.3",
+    "webidl-conversions": "^3.0.1",
+    "whatwg-url": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtferma/keynest-extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtferma/keynest-extension/issues"
+  },
+  "homepage": "https://github.com/mtferma/keynest-extension#readme",
+  "description": ""
+}
